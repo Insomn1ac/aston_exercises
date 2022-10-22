@@ -4,13 +4,13 @@ import exercises.linkedlist.LinkedList;
 import exercises.linkedlist.LinkedListImpl;
 
 public class MergeSort {
-    public static LinkedList<Integer> sort(LinkedList<Integer> list) {
+    public static LinkedList<SimpleClass> sort(LinkedList<SimpleClass> list) {
         if (list.size() == 1) {
             return list;
         }
         int middle = list.size() / 2;
-        LinkedList<Integer> left = new LinkedListImpl<>();
-        LinkedList<Integer> right = new LinkedListImpl<>();
+        LinkedList<SimpleClass> left = new LinkedListImpl<>();
+        LinkedList<SimpleClass> right = new LinkedListImpl<>();
         for (int i = 0; i < middle; i++) {
             left.add(list.get(i));
         }
@@ -22,14 +22,14 @@ public class MergeSort {
         return merge(left, right, middle, list.size() - middle);
     }
 
-    private static LinkedList<Integer> merge(LinkedList<Integer> leftList,
-                                     LinkedList<Integer> rightList,
+    private static LinkedList<SimpleClass> merge(LinkedList<SimpleClass> leftList,
+                                     LinkedList<SimpleClass> rightList,
                                      int left, int right) {
         int indexLeft = 0;
         int indexRight = 0;
-        LinkedList<Integer> outputList = new LinkedListImpl<>();
+        LinkedList<SimpleClass> outputList = new LinkedListImpl<>();
         while (indexLeft < left && indexRight < right) {
-            if (leftList.get(indexLeft) <= rightList.get(indexRight)) {
+            if (leftList.get(indexLeft).compareTo(rightList.get(indexRight)) <= 0) {
                 outputList.add(leftList.get(indexLeft++));
             } else {
                 outputList.add(rightList.get(indexRight++));

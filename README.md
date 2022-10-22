@@ -1,0 +1,2 @@
+[![Github Actions](https://github.com/Insomn1ac/aston_exercises/actions/workflows/maven.yml/badge.svg)](https://github.com/Insomn1ac/aston_exercises/actions/workflows/maven.yml)
+[![CodeCov](https://codecov.io/gh/Insomn1ac/aston_exercises/branch/master/graph/badge.svg?token=1U3DJT34J5)](https://codecov.io/gh/Insomn1ac/aston_exercises)

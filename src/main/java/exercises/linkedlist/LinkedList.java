@@ -6,4 +6,5 @@ public interface LinkedList<E> extends Iterable<E> {
     boolean remove(E element);
     boolean contains(E element);
     int size();
+    String toString();
 }

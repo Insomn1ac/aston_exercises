@@ -1,9 +1,6 @@
 package exercises.linkedlist;
 
-import java.util.ConcurrentModificationException;
-import java.util.Iterator;
-import java.util.NoSuchElementException;
-import java.util.Objects;
+import java.util.*;
 
 public class LinkedListImpl<E> implements LinkedList<E> {
     private int size;
@@ -116,5 +113,16 @@ public class LinkedListImpl<E> implements LinkedList<E> {
                 return resultNode.element;
             }
         };
+    }
+
+    public String toString() {
+        Node<E> currentNode = firstNode;
+        int arrayIndex = 0;
+        String[] array = new String[size];
+        while (currentNode != null) {
+            array[arrayIndex++] = currentNode.element.toString();
+            currentNode = currentNode.next;
+        }
+        return Arrays.toString(array);
     }
 }

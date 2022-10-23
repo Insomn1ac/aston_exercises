@@ -35,6 +35,15 @@ class LinkedListImplTest {
     }
 
     @Test
+    public void checkToStringMethod() {
+        assertThat(list.toString()).contains("2");
+        assertThat(list.toString()).containsWhitespaces();
+        assertThat(list.toString()).doesNotContain("3");
+        list.add(3);
+        assertThat(list.toString()).contains("3");
+    }
+
+    @Test
     public void whenAddAndGet() {
         list.add(3);
         list.add(4);
